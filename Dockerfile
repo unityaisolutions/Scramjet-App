@@ -13,7 +13,7 @@ WORKDIR /app
 COPY ["package.json", "pnpm-lock.yaml", "./"]
 RUN apk add --upgrade --no-cache python3 make g++ \
 	&& npm install -g pnpm \
-	&& pnpm install --omit=dev
+	&& pnpm install
 
 COPY . .
 
